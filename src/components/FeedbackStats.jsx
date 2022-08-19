@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const FeedbackStats = ({ feedbacks }) => {
 
@@ -9,7 +9,7 @@ const FeedbackStats = ({ feedbacks }) => {
 
     return (
         <div className='feedback-stats'>
-            <h4>{feedbacks.length} review{'s' ? feedbacks.length > 1 : null}</h4>
+            <h4>{feedbacks.length} review{feedbacks.length > 1 ? 's' : null}</h4>
             <h4>Rating: {isNaN(average) ? 0 : average.toFixed(1).replace(/[.]0$/, '')}</h4>
         </div>
     )
@@ -18,11 +18,11 @@ const FeedbackStats = ({ feedbacks }) => {
 FeedbackStats.propTypes = {
     feedbacks: PropTypes.arrayOf(
         PropTypes.shape({
-            id : PropTypes.number.isRequired,
+            id : PropTypes.string.isRequired,
             rating: PropTypes.number.isRequired,
             text: PropTypes.string.isRequired,
         })
     )
 }
 
-export default FeedbackStats
+export default FeedbackStats;

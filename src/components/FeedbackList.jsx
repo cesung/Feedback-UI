@@ -3,11 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FeedbackItem from './FeedbackItem';
 
-const FeedbackList = ({ feedbacks, feedbackOnDelete }) => {
+const FeedbackList = ({ feedbacks, onFeedbackDelete }) => {
     return (feedbacks != null && feedbacks.length > 0) ? (
         <div className='feedback-list'>
             {feedbacks.map( (feedback) => (
-                <FeedbackItem key={feedback.id} feedback={feedback} feedbackOnDelete={feedbackOnDelete}/>
+                <FeedbackItem key={feedback.id} feedback={feedback} onFeedbackDelete={onFeedbackDelete}/>
             ))}
         </div>
     ) : (
@@ -18,11 +18,11 @@ const FeedbackList = ({ feedbacks, feedbackOnDelete }) => {
 FeedbackList.propTypes = {
     feedbacks: PropTypes.arrayOf(
         PropTypes.shape({
-            id : PropTypes.number.isRequired,
+            id : PropTypes.string.isRequired,
             rating: PropTypes.number.isRequired,
             text: PropTypes.string.isRequired,
         })
     )
 }
 
-export default FeedbackList
+export default FeedbackList;

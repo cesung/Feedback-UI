@@ -33,4 +33,4 @@ Header.propTypes = {
     textColor: PropTypes.string,
 }
 
-export default Header
+export default Header;
