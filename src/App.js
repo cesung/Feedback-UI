@@ -8,6 +8,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import About from './pages/About';
 import Nav from './components/Nav';
+import Post from './components/Post';
 
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
                         }
                     ></Route>
                     <Route exact path="/about" element={<About />} />
+                    <Route exact path="/post/:id" element={<Post />} />
                 </Routes>
             </div>
         </Router>
