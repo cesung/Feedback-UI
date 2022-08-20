@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Header = (props) => {
-    const {
-        text,
-        backgroundColor,
-        textColor,
-    } = props;
+const Header = ({text, backgroundColor, textColor}) => {
 
     const headerStyle = {
         backgroundColor: backgroundColor,

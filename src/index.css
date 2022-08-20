@@ -17,6 +17,10 @@ ul {
   list-style: none;
 }
 
+.nav-container {
+  display: flex;
+}
+
 .container {
   max-width: 768px;
   margin: auto;
@@ -188,8 +192,11 @@ input:focus {
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link {
+  height: 70px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
