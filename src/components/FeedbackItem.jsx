@@ -1,10 +1,14 @@
 import { FaTimes } from 'react-icons/fa'
+import { useContext } from 'react';
 import PropTypes from 'prop-types'
 import React from 'react';
 import Card from './shared/Card'
+import FeedbackContext from './context/FeedbackContext';
 
 
-const FeedbackItem = ( {feedback, onFeedbackDelete} ) => {
+const FeedbackItem = ( {feedback} ) => {
+
+    const {onFeedbackDelete} = useContext(FeedbackContext);
 
     return (
         <Card>

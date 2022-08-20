@@ -1,14 +1,19 @@
 import { useState } from 'react';
+import { useContext } from 'react';
+import FeedbackContext from './context/FeedbackContext';
 import React from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 import RatingSelector from './RatingSelector';
 
-const FeedbackForm = ({ onFeedbackUpdated }) => {
-    const [text, setText] = useState("")
+const FeedbackForm = () => {
+
+    const {onFeedbackAdded} = useContext(FeedbackContext);
+
+    const [text, setText] = useState("");
     const [rating, setRating] = useState(10);
-    const [buttonDisabled, setButtonDisabled] = useState(true)
-    const [message, setMessage] = useState('')
+    const [buttonDisabled, setButtonDisabled] = useState(true);
+    const [message, setMessage] = useState('');
 
     const onFeedbackChange = (event) => {
         const text = event.target.value;
@@ -33,9 +38,10 @@ const FeedbackForm = ({ onFeedbackUpdated }) => {
                 text,
                 rating,
             }
-            onFeedbackUpdated(newFeedback);
+            onFeedbackAdded(newFeedback);
             setText("")
             setRating(10);
+            setButtonDisabled(true);
         }
     };
 
