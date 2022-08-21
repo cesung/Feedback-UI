@@ -4,17 +4,17 @@ const Feedbacks = [
     {
         id: uuidv4(),
         rating: 10,
-        text: 'Awesome',
+        text: 'Awesome Awesome Awesome Awesome :")',
     },
     {
         id: uuidv4(),
         rating: 9,
-        text: 'Nice',
+        text: "Nice Nice Nice Nice Nice :)",
     },
     {
         id: uuidv4(),
         rating: 6,
-        text: 'Not bad',
+        text: "Not bad Not bad Not bad Not bad :|",
     },
 ];
 
